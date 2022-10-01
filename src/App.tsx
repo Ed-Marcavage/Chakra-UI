@@ -1,37 +1,38 @@
 import * as React from "react";
 import {
-  ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
   Grid,
-  theme,
-  Input,
-  Heading,
   Flex,
-  Button,
   useColorMode,
   useColorModeValue,
-  Textarea,
   Tabs,
   TabList,
   TabPanels,
   Tab,
   TabPanel,
-  Badge,
   useBoolean,
   Switch,
   GridItem,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Button,
 } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { Logo } from "./Logo";
-import { MyRequest } from "./components/MyRequest";
-import { Request } from "./components/Request";
-import { AirbnbCard } from "./components/Bulletin";
+import { MyRequest } from "./components/Patron/MyRequest";
+import { Request } from "./components/Patron/Request";
+import { AirbnbCard } from "./components/Artist/Bulletin";
+import { BulletinBoard } from "./components/Artist/BulletinBoard";
+import { MyWork } from "./components/Artist/MyWork";
 
 export const App = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [flag, setFlag] = useBoolean();
   const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue("gray.100", "gray.700");
@@ -91,76 +92,10 @@ export const App = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
-                <Grid
-                  templateColumns="repeat(3, 1fr)"
-                  gap={6}
-                  w="500px"
-                  h="600"
-                >
-                  <GridItem>
-                    <AirbnbCard />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard Color={"yellow"} Status={"3 Days"} />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard Color={"yellow"} Status={"4 Days"} />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard Color={"red"} Status={"10 Days"} />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard Color={"yellow"} Status={"3 Days"} />
-                  </GridItem>
-                </Grid>
+                <BulletinBoard />
               </TabPanel>
               <TabPanel>
-                <Grid
-                  templateColumns="repeat(3, 1fr)"
-                  gap={6}
-                  w="500px"
-                  h="600"
-                >
-                  <GridItem>
-                    <AirbnbCard Color={"red"} Status={"Late"} />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard Color={"yellow"} Status={"Attention"} />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard Color={"yellow"} Status={"Attention"} />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard Color={"red"} Status={"Late"} />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard />
-                  </GridItem>
-                  <GridItem>
-                    <AirbnbCard Color={"yellow"} Status={"Attention"} />
-                  </GridItem>
-                </Grid>
+                <MyWork />
               </TabPanel>
             </TabPanels>
           </Tabs>

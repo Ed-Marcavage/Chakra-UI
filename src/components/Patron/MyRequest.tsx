@@ -34,11 +34,38 @@ export const MyRequest = () => {
           </Text>
           <Text fontSize="sm">Arts Name</Text>
         </Box>
-        <Box>
+        <Box mb={5}>
           <Text fontWeight="bold">
             Art Work Title
             <Badge ml="1" colorScheme="red">
               Submitted
+            </Badge>
+          </Text>
+          <Text fontSize="sm">Arts Name</Text>
+        </Box>
+        <Box mb={5}>
+          <Text fontWeight="bold">
+            Art Work Title
+            <Badge ml="1" colorScheme="green">
+              Complete
+            </Badge>
+          </Text>
+          <Text fontSize="sm">Arts Name</Text>
+        </Box>
+        <Box mb={5}>
+          <Text fontWeight="bold">
+            Art Work Title
+            <Badge ml="1" colorScheme="red">
+              Submitted
+            </Badge>
+          </Text>
+          <Text fontSize="sm">Arts Name</Text>
+        </Box>
+        <Box mb={5}>
+          <Text fontWeight="bold">
+            Art Work Title
+            <Badge ml="1" colorScheme="yellow">
+              In progress
             </Badge>
           </Text>
           <Text fontSize="sm">Arts Name</Text>
