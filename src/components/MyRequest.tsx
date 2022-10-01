@@ -15,7 +15,7 @@ import {
 export const MyRequest = () => {
   return (
     <>
-      <Box w="500px" h="500">
+      <Box w="500px" h="600">
         <Box mb={5}>
           <Text fontWeight="bold">
             Art Work Title

@@ -15,7 +15,7 @@ export const Request = () => {
   const formBackground = useColorModeValue("gray.100", "gray.700");
 
   return (
-    <Box w="500px" h="500">
+    <Box w="500px" h="600">
       <Heading mb={6}>Request</Heading>
       <Input
         placeholder="ed.marcavage@gmail.com"
