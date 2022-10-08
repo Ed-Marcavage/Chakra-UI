@@ -87,7 +87,7 @@ export const App = () => {
           </Flex>
           <Tabs variant="soft-rounded" colorScheme="teal">
             <TabList>
-              <Tab>Bulletin</Tab>
+              <Tab>Bulletin Board</Tab>
               <Tab>My Work</Tab>
             </TabList>
             <TabPanels>
